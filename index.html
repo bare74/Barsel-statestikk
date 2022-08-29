@@ -2,23 +2,13 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
     <title>Barsel Skjema/ Registrering</title>
-    <link href='https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css' rel='stylesheet'
-        type='text/css'>
-    <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/css/bootstrap-switch.css' rel='stylesheet'
-        type='text/css'>
-    <link href='https://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css' rel='stylesheet'
-        type='text/css'>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js' type='text/javascript'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js'
-        type='text/javascript'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js'
-        type='text/javascript'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/1.8/js/bootstrap-switch.min.js'
-        type='text/javascript'></script>
-    <script src='https://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js'
-        type='text/javascript'></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -41,11 +31,39 @@
 </head>
 
 <body>
-    <form id="myForm">
+    <div id="myForm" class="form">
+        <div class="title">Barsel Skjema / Registrering</div>
+        <div class="input-container ic1">
+            <input name="birth_date" id="birth_date" class="input" type="date" />
+            <div class="cut"></div>
+            <label for="birth_date" class="placeholder">Fødsels dato:</label>
+        </div>
+        <div class="input-container ic1">
+            <input name="discharged_date" class="input" type="date" />
+            <div class="cut"></div>
+            <label for="discharged_date" class="placeholder">Utskrevet dato:</label>
+        </div>
+        <div class="input-container ic1">
+            <input name="maternity_date" class="input" type="date" />
+            <div class="cut"></div>
+            <label for="maternity_date" class="placeholder">Barsel Besøk dato:</label>
+        </div>
+        <div class="input-container ic1">
+
+            <textarea placeholder="AVVIK NOTERES HER..." name="message">
+    </textarea>
+            <div class="cut"></div>
+            <label class="placeholder">Avvik noteres her...</label>
+        </div>
+        <button type="text" class="submit" onclick="SubForm()">SEND / REGISTRER</button>
+    </div>
+</body>
+<footer>
+    <!-- <form id="myForm">
         <label>Fødsels Dato:</label>
         <br />
 
-        <input name="birth_date" />
+        <input type="date" name="birth_date" />
         </div>
         <br />
         <label>Utskrevet Dato:</label>
@@ -59,18 +77,16 @@
         <label>Avvik</label>
         <br />
         <textarea name="message">
-    </textarea>
+        </textarea>
+        <button type="text" onclick="SubForm()">SEND / REGISTRER</button>
         <br />
         <br />
     </form>
-    <button onclick="SubForm()">Submit</button>
-    </div>
-    </div>
-    </div>
-    <br />
 
-
-    <script src="./javascript/index.js"></script>
-</body>
+    </div>
+    </div>
+    </div>
+    <br /> -->
+</footer>
 
 </html>
