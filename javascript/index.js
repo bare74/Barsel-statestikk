@@ -1,8 +1,4 @@
-$(function () {
-  $("#datepicker")
-    .datepicker({
-      autoclose: true,
-      todayHighlight: true,
-    })
-    .datepicker("update", new Date());
+$(document).ready(function () {
+  $(".multiselect").multiselect();
+  $(".datepicker").datepicker();
 });
