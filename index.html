@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
     <title>Barsel Skjema/ Registrering</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -15,78 +14,51 @@
     <script>
         function SubForm() {
             $.ajax({
-                url: 'https://api.apispreadsheets.com/data/SBz4WYKUyzMo5P6J/',
-                type: 'post',
+                url: "https://api.apispreadsheets.com/data/SBz4WYKUyzMo5P6J/",
+                type: "post",
                 data: $("#myForm").serializeArray(),
                 success: function () {
-                    alert("Data sendt til registrering")
+                    alert("Form Data Submitted :)")
                 },
-                error: function () {
-                    alert("Obs! Her ble det feil, forsøk igjen")
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("There was an error :(")
                 }
             });
         }
     </script>
-
 </head>
 
 <body>
-    <div id="myForm" class="form">
-        <div class="title">Barsel Skjema / Registrering</div>
-        <div class="input-container ic1">
-            <input name="birth_date" id="birth_date" class="input" type="date" />
-            <div class="cut"></div>
-            <label for="birth_date" class="placeholder">Fødsels dato:</label>
-        </div>
-        <div class="input-container ic1">
-            <input name="discharged_date" class="input" type="date" />
-            <div class="cut"></div>
-            <label for="discharged_date" class="placeholder">Utskrevet dato:</label>
-        </div>
-        <div class="input-container ic1">
-            <input name="maternity_date" class="input" type="date" />
-            <div class="cut"></div>
-            <label for="maternity_date" class="placeholder">Barsel Besøk dato:</label>
-        </div>
-        <div class="input-container ic1">
+    <div class="form">
 
-            <textarea placeholder="AVVIK NOTERES HER..." name="message">
+        <div class="title">Barsel Skjema / Registrering</div>
+        <form id="myForm">
+            <div class="input-container ic1">
+
+                <input name="birth_date" class="input" type="date" />
+                <div class="cut"></div>
+                <label class="placeholder">Fødsels dato:</label>
+            </div>
+            <div class="input-container ic1">
+                <input name="discharged_date" class="input" type="date" />
+                <div class="cut"></div>
+                <label class="placeholder">Utskrevet dato:</label>
+            </div>
+            <div class="input-container ic1">
+                <input name="maternity_date" class="input" type="date" />
+                <div class="cut"></div>
+                <label class="placeholder">Barsel Besøk dato:</label>
+            </div>
+            <div class="input-container ic1">
+                <textarea name="message">
     </textarea>
-            <div class="cut"></div>
-            <label class="placeholder">Avvik noteres her...</label>
-        </div>
+                <div class="cut"></div>
+                <label class="placeholder">Avvik noteres her...</label>
+            </div>
+        </form>
         <button type="text" class="submit" onclick="SubForm()">SEND / REGISTRER</button>
     </div>
 </body>
-<footer>
-    <!-- <form id="myForm">
-        <label>Fødsels Dato:</label>
-        <br />
-
-        <input type="date" name="birth_date" />
-        </div>
-        <br />
-        <label>Utskrevet Dato:</label>
-        <br />
-        <input name="discharged_date" />
-        <br />
-        <label>Barsel Besøk Dato:</label>
-        <br />
-        <input name="maternity_date" />
-        <br />
-        <label>Avvik</label>
-        <br />
-        <textarea name="message">
-        </textarea>
-        <button type="text" onclick="SubForm()">SEND / REGISTRER</button>
-        <br />
-        <br />
-    </form>
-
-    </div>
-    </div>
-    </div>
-    <br /> -->
-</footer>
+<!-- <script src="./javascript/index.js"></script> -->
 
 </html>
