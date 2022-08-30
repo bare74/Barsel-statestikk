@@ -11,21 +11,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script>
-        function SubForm() {
-            $.ajax({
-                url: "https://api.apispreadsheets.com/data/SBz4WYKUyzMo5P6J/",
-                type: "post",
-                data: $("#myForm").serializeArray(),
-                success: function () {
-                    alert("Form Data Submitted :)")
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    alert("There was an error :(")
-                }
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -35,7 +20,7 @@
         <form id="myForm">
             <div class="input-container ic1">
 
-                <input name="birth_date" class="input" type="date" />
+                <input name="birth_date" class="input" type="date" id="birth_date" />
                 <div class="cut"></div>
                 <label class="placeholder">Fødsels dato:</label>
             </div>
@@ -55,9 +40,9 @@
                 <label class="placeholder">Avvik noteres her...</label>
             </div>
         </form>
-        <button type="text" class="submit" onclick="SubForm()">SEND / REGISTRER</button>
+        <button id="btn" type="text" class="submit">SEND / REGISTRER</button>
     </div>
 </body>
-<!-- <script src="./javascript/index.js"></script> -->
+<script src="./javascript/index.js"></script>
 
 </html>
