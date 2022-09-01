@@ -9,7 +9,7 @@ btn.addEventListener("click", function handleClick(event) {
     type: "post",
     data: $("#myForm").serializeArray(),
     success: function () {
-      alert("Data registrert");
+      alert("Data registrert og lagret");
       document.getElementById("myForm").reset();
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
